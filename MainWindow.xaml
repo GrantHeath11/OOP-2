@@ -33,13 +33,16 @@
         <Label Grid.Column="1" Content="Current Player:" HorizontalAlignment="Left" Margin="174,91,0,0" VerticalAlignment="Top"/>
         <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="183,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="70" IsReadOnly="True" TextChanged="TextBox_Current_Player" Name="TextBox_Current_Player_Tracker"/>
         <Button Grid.Column="1" HorizontalAlignment="Left" Margin="405,278,0,0" VerticalAlignment="Top" Height="35" Width="70" Click="ButtonReset" Name="Reset" >
-            <Button Content="Button"/>
+            <Button Content="Reset"/>
         </Button>
         <Button Grid.Column="1" Content="Exit" HorizontalAlignment="Left" Margin="405,330,0,0" VerticalAlignment="Top" Height="35" Width="70" Click="ButtonExit" Name="Exit"/>
         <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="414,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="54" Name="TextBox_X_Wins"/>
         <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="414,214,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="54" Name="TextBox_O_Wins"/>
         <Label Grid.Column="1" Content="X Wins:" HorizontalAlignment="Left" Margin="365,187,0,0" VerticalAlignment="Top"/>
         <Label Grid.Column="1" Content="O Wins:" HorizontalAlignment="Left" Margin="365,210,0,0" VerticalAlignment="Top"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="413,164,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="54" x:Name="Textbox_Drawed_games" TextChanged="Textbox_Drawed_games_TextChanged"/>
+        <Label Grid.Column="1" Content="Draws:" HorizontalAlignment="Left" Margin="363,160,0,0" VerticalAlignment="Top"/>
+        <Label Grid.Column="1" Content="Score" HorizontalAlignment="Left" Margin="389,122,0,0" VerticalAlignment="Top" FontSize="22"/>
 
     </Grid>
 </Window>
