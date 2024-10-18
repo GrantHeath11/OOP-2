@@ -1,0 +1,26 @@
+﻿<Window x:Class="CarList_Assignment.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarList_Assignment"
+        mc:Ignorable="d"
+        Title="Car Inventory" Height="600" Width="1000">
+    <Grid>
+        <ComboBox HorizontalAlignment="Left" Margin="113,23,0,0" VerticalAlignment="Top" Width="120" Name="Make" SelectionChanged="Make_SelectionChanged"/>
+        <TextBox HorizontalAlignment="Left" Margin="113,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Name="Model" TextChanged="Model_TextChanged"/>
+        <ComboBox HorizontalAlignment="Left" Margin="113,88,0,0" VerticalAlignment="Top" Width="120" Name="Year" SelectionChanged="Year_SelectionChanged"/>
+        <Label Content="Make" HorizontalAlignment="Left" Margin="68,21,0,0" VerticalAlignment="Top"/>
+        <Label Content="Model" HorizontalAlignment="Left" Margin="66,55,0,0" VerticalAlignment="Top"/>
+        <Label Content="Year:" HorizontalAlignment="Left" Margin="73,86,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="113,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Name="Price" TextChanged="Price_TextChanged"/>
+        <Label Content="Price:" HorizontalAlignment="Left" Margin="70,118,0,0" VerticalAlignment="Top"/>
+        <CheckBox HorizontalAlignment="Left" Margin="113,151,0,0" VerticalAlignment="Top" Name="New_Checkbox"/>
+        <Label Content="New:" HorizontalAlignment="Left" Margin="71,146,0,0" VerticalAlignment="Top"/>
+        <ListBox Margin="88,177,372,90" Name="CarListBox" SelectionChanged="CarListBox_SelectionChanged"/>
+        <TextBox HorizontalAlignment="Left" Margin="90,499,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="538" x:Name="Text_Box_Successful_Input" IsReadOnly="True" Height="22" TextChanged="Text_Box_Successful_Input_TextChanged"/>
+        <Button Content="Enter" HorizontalAlignment="Left" Margin="504,526,0,0" VerticalAlignment="Top" Name="Button_Enter" Height="25" Width="38" Click="Button_Enter_Click"/>
+        <Button Content="Reset" HorizontalAlignment="Left" Margin="547,526,0,0" VerticalAlignment="Top" Name="Button_Reset" Height="25" Width="38" Click="Button_Reset_Click" RenderTransformOrigin="3.237,6.262"/>
+        <Button Content="Exit" HorizontalAlignment="Left" Margin="590,526,0,0" VerticalAlignment="Top" Name="Button_Exit" Height="25" Width="38" Click="Button_Exit_Click"/>
+    </Grid>
+</Window>
