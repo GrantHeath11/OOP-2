@@ -2,6 +2,8 @@
 // StandardDeck.cs
 // Assignment-5 OOP-2 Advanced DeckBuilder
 // 2024-11-29
+// This class creates a full deck of 52 standard playing cards (using Card.cs),
+// it creates a card for all 13 ranks and 4 suits Hearts, Diamonds, Clubs, Spades (so 52 cards total)
 
 /// <summary>
 /// StandardDeck is inheriting from the Deck class.

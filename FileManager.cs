@@ -2,6 +2,7 @@
 // FileManager.cs
 // Assignment-5 OOP-2 Advanced DeckBuilder
 // 2024-11-29
+// File manager is what connects the project to the JSON file which is where the deck is stored
 
 using Deck_Builder_Assignment;
 using Newtonsoft.Json;

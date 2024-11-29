@@ -2,6 +2,7 @@
 // CustomDeck.cs
 // Assignment-5 OOP-2 Advanced DeckBuilder
 // 2024-11-29
+// CustomDeck allows user to enter their own cards into the deck
 
 using System;
 using System.Collections.Generic;

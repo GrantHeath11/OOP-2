@@ -2,14 +2,14 @@
 // Deck.cs
 // Assignment-5 OOP-2 Advanced DeckBuilder
 // 2024-11-29
+// Deck.cs is in charge of managing the deck, this includes shuffling, adding cards, and dealing cards
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
 /// <summary>
-/// Abstract class representing a generic deck of cards. 
-/// It provides methods for adding cards, shuffling, and dealing cards.
+/// This class provides methods for adding cards, shuffling, and dealing cards.
 /// </summary>
 public abstract class Deck
 {

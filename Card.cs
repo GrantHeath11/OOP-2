@@ -2,6 +2,7 @@
 // Card.cs
 // Assignment-5 OOP-2 Advanced DeckBuilder
 // 2024-11-29
+// This file creates each invidual card and assigns their rank and suit
 
 /// <summary>
 /// Represents a card with a rank and a suit.

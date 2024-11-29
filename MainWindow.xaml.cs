@@ -2,6 +2,7 @@
 // MainWindow.xaml.cs
 // Assignment-5 OOP-2 Advanced DeckBuilder
 // 2024-11-29
+// This is the main file for the project, this is mainly just where events from buttons happen then it interacts with the other files from there
 
 using Newtonsoft.Json;
 using System;
