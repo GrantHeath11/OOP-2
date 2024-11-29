@@ -1,7 +1,4 @@
-﻿//Grant Heath
-//Advanced Deck Builder Assignment 5
-//2024-11-29
-
+﻿// MainWindow.xaml.cs
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -14,6 +11,7 @@ namespace Deck_Builder_Assignment
     public partial class MainWindow : Window
     {
         private StandardDeck deck; // Use StandardDeck to hold the deck
+        private CustomDeck customDeck; // Reference to the CustomDeck for custom cards
 
         /// <summary>
         /// Initializes components
@@ -22,6 +20,7 @@ namespace Deck_Builder_Assignment
         {
             InitializeComponent();
             deck = new StandardDeck();  // Initialize with a full standard deck
+            customDeck = new CustomDeck();  // Initialize custom deck
             LoadDeck();  // Load deck from JSON
         }
 
@@ -83,14 +82,14 @@ namespace Deck_Builder_Assignment
         }
 
         /// <summary>
-        /// Resets the deck to a full standard deck and clears the dealt cards wheen button is pressed.
+        /// Resets the deck to a full standard deck and clears the dealt cards when button is pressed.
         /// </summary>
         private void ResetButton_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 // Reset the deck to a full standard deck
-                deck = new StandardDeck();  
+                deck = new StandardDeck();
                 DealtCardsListBox.ItemsSource = null;  // Clear the dealt cards ListBox
                 SaveDeck();  // Save the new deck 
                 UpdateDeckView();  // Refresh the deck view after reset
@@ -150,7 +149,7 @@ namespace Deck_Builder_Assignment
             try
             {
                 // Refresh the DeckListBox to show the current state of the deck
-                UpdateDeckView(); 
+                UpdateDeckView();
             }
             catch (Exception ex)
             {
@@ -159,14 +158,14 @@ namespace Deck_Builder_Assignment
         }
 
         /// <summary>
-        /// updates deck listview
+        /// Updates deck listview
         /// </summary>
         private void UpdateDeckView()
         {
             try
             {
                 DeckListBox.ItemsSource = null;  // Clear the previous items
-                DeckListBox.ItemsSource = deck.Cards;  
+                DeckListBox.ItemsSource = deck.Cards;
             }
             catch (Exception ex)
             {
@@ -201,10 +200,13 @@ namespace Deck_Builder_Assignment
 
                 if (!string.IsNullOrEmpty(suit) && !string.IsNullOrEmpty(rank))
                 {
-                    Card customCard = new Card(rank, suit);
-                    deck.AddCard(customCard);  // Add custom card to the current deck
-                    SaveDeck();  // Save the deck after adding the custom card
-                    UpdateDeckView();  // Refresh the deck view after adding a custom card
+                    // Add the custom card to both the custom deck and the main deck
+                    customDeck.AddCustomCard(suit, rank);  // Add to CustomDeck
+                    Card customCard = new Card(rank, suit);  // Create a new card for the main deck
+                    deck.Cards.Add(customCard);  // Add to the main deck
+
+                    SaveDeck();  // Save the updated deck
+                    UpdateDeckView();  // Refresh the deck view after adding the custom card
                 }
                 else
                 {
@@ -222,3 +224,5 @@ namespace Deck_Builder_Assignment
         }
     }
 }
+
+
