@@ -19,17 +19,17 @@ public class FileManager
     private static string filePath = "deck.json";  // File path where deck data will be saved
 
     /// <summary>
-    /// Overwrites the existing JSON file with the updated deck data.
+    /// Overwrites the existing JSON file with the updated StandardDeck data.
     /// </summary>
     public static void OverwriteJsonWithDeck(StandardDeck deck, string jsonFilePath)
     {
-        // Step 1: Get the deck's card list from the StandardDeck class
+        // Get the list of cards from the StandardDeck
         var deckData = deck.Cards;
 
-        // Step 2: Serialize the deck's card list into a JSON string
+        // Convert the card list to JSON format
         string updatedJson = JsonConvert.SerializeObject(deckData, Formatting.Indented);
 
-        // Step 3: Write the serialized deck list to the JSON file, overwriting its contents
+        // Overwrite the JSON file with the updated standard deck
         File.WriteAllText(jsonFilePath, updatedJson);
     }
 
@@ -74,6 +74,6 @@ public class FileManager
             }
         }
 
-        return new List<Card>();  // Return an empty deck if the file doesn't exist or loading fails
+        return new List<Card>();  // Return an empty deck if the file does not exist or loading fails
     }
 }
