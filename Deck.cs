@@ -1,6 +1,7 @@
-﻿//Grant Heath
-//Advanced Deck Builder Assignment 5
-//2024-11-29
+﻿// Grant Heath
+// Deck.cs
+// Assignment-5 OOP-2 Advanced DeckBuilder
+// 2024-11-29
 
 using System;
 using System.Collections.Generic;

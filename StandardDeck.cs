@@ -1,4 +1,9 @@
-﻿/// <summary>
+﻿// Grant Heath
+// StandardDeck.cs
+// Assignment-5 OOP-2 Advanced DeckBuilder
+// 2024-11-29
+
+/// <summary>
 /// StandardDeck is inheriting from the Deck class.
 /// The point of this class is to create the standard deck (basic 52 card deck)
 /// </summary>

@@ -1,6 +1,7 @@
-﻿//Grant Heath
-//Advanced Deck Builder Assignment 5
-//2024-11-29
+﻿// Grant Heath
+// Card.cs
+// Assignment-5 OOP-2 Advanced DeckBuilder
+// 2024-11-29
 
 /// <summary>
 /// Represents a card with a rank and a suit.

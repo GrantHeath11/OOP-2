@@ -1,4 +1,8 @@
-﻿// MainWindow.xaml.cs
+﻿// Grant Heath
+// MainWindow.xaml.cs
+// Assignment-5 OOP-2 Advanced DeckBuilder
+// 2024-11-29
+
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
