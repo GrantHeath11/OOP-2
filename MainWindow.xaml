@@ -1,20 +1,22 @@
 ﻿<Window x:Class="Deck_Builder_Assignment.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Deck Builder" Height="450" Width="800">
+        Title="Deck Builder" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+
     <Grid>
-        <ListView Name="DeckListBox" HorizontalAlignment="Left" Height="200" Margin="10,10,0,0" VerticalAlignment="Top" Width="360" TabIndex="0"/>
-        <ListView Name="DealtCardsListBox" HorizontalAlignment="Left" Height="200" Margin="400,10,0,0" VerticalAlignment="Top" Width="360" TabIndex="1"/>
+        <ListView Name="DeckListBox" HorizontalAlignment="Left" Height="200" Margin="10,10,0,0" VerticalAlignment="Top" Width="360" TabIndex="0" ToolTip="ListView that shows the user what cards are in the current deck"/>
+        <ListView Name="DealtCardsListBox" HorizontalAlignment="Left" Height="200" Margin="400,10,0,0" VerticalAlignment="Top" Width="360" TabIndex="1" ToolTip="ListView that shows the cards that have been dealt when they are dealt"/>
 
-        <Button Name="ShuffleButton" Content="_Shuffle" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="30" Margin="10,220,0,0" Click="ShuffleButton_Click" TabIndex="2"/>
-        <Button Name="DealButton" Content="_Deal" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="30" Margin="466,217,0,0" Click="DealButton_Click" TabIndex="5"/>
-        <Button Name="ResetButton" Content="_Reset" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="30" Margin="115,220,0,0" Click="ResetButton_Click" TabIndex="2"/>
-        <Button Name="ExitButton" Content="E_xit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="30" Margin="616,220,0,0" Click="ExitButton_Click" TabIndex="6"/>
+        <Button Name="ShuffleButton" Content="_Shuffle" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="30" Margin="10,220,0,0" Click="ShuffleButton_Click" TabIndex="2" ToolTip="Shuffle Button will shuffle the deck"/>
+        <Button Name="DealButton" Content="_Deal" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="30" Margin="466,217,0,0" Click="DealButton_Click" TabIndex="5" ToolTip="Deak Button will deal the amount of cards the user enters in the number of cards textbox"/>
+        <Button Name="ResetButton" Content="_Reset" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="30" Margin="115,220,0,0" Click="ResetButton_Click" TabIndex="2" ToolTip="Reset Button will delete current deck and replace it with a standard 52 card deck"/>
+        <Button Name="ExitButton" Content="E_xit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="30" Margin="616,220,0,0" Click="ExitButton_Click" TabIndex="6" ToolTip="Exit button will close the program"/>
 
-        <Button Name="AddCardButton" Content="Add Custom Card" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="30" Margin="10,270,0,0" Click="AddCardButton_Click" TabIndex="7"/>
+        <Button Name="AddCardButton" Content="Add Custom Card" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="30" Margin="10,270,0,0" Click="AddCardButton_Click" TabIndex="7" ToolTip="If proper data is in the Rank and Suit texboxes then this button will add your new custom card to the deck"/>
 
-        <TextBox Name="SuitTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="25" Margin="140,352,0,0" TabIndex="10"/>
-        <TextBox Name="RankTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="25" Margin="140,310,0,0" TabIndex="8"/>
+        <TextBox Name="SuitTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="25" Margin="140,352,0,0" TabIndex="10" ToolTip="Texbox for Suit field of custom card"/>
+        <TextBox Name="RankTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="25" Margin="140,310,0,0" TabIndex="8" ToolTip="Textbox for Rank field of custom card"/>
 
         <TextBox Name="DealTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Height="25" Margin="616,306,0,0" TabIndex="9"/>
 
