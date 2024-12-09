@@ -1,4 +1,8 @@
-﻿open System
+//Grant Heath
+//Dec 8th 2024
+//OOP 2
+//guess the number console game in F#
+open System
 
 // Define constants for the range of the random number
 // let is the keyword to define things in F#
